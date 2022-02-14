@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - promosys@localhost" uuid="d840fac1-d0a5-4153-88ab-b174dea36290">
+    <database-info product="MySQL" version="5.5.5-10.1.33-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="promosys"/>
+    <table name="app_action_results" schema="" catalog="promosys" type="TABLE">
+      <column name="status_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="status_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="status_description" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="status_id"/>
+    </table>
+    <table name="app_audits" schema="" catalog="promosys" type="TABLE">
+      <column name="audit_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="audit_action" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="audit_object" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="audit_user" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="audit_status" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="audit_date" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="audit_id"/>
+    </table>
+    <table name="app_cars" schema="" catalog="promosys" type="TABLE">
+      <column name="car_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="car_phone" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="car_make" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="car_model" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="car_year" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="car_plate" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="car_img_filename" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="car_img_size" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="car_posteduser" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="car_posteddate" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="car_modifieduser" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="car_modifieddate" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="car_id"/>
+    </table>
+    <table name="app_comment_votes" schema="" catalog="promosys" type="TABLE">
+      <column name="vote_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="vote_phone" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="vote_comment" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="vote_type" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="vote_posted" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="vote_id"/>
+    </table>
+    <table name="app_comments" schema="" catalog="promosys" type="TABLE">
+      <column name="comment_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="comment_post" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="comment_content" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="comment_src" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="comment_img_size" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="comment_type" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="comment_parent" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="comment_posted" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="comment_posteduser" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="comment_id"/>
+    </table>
+    <table name="app_config" schema="" catalog="promosys" type="TABLE">
+      <column name="config_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="config_about" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="config_privacy_policy" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="config_topup_url" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="config_price_per_trip" sqlType="DECIMAL" precision="10" scale="3" nullable="true" jdbcType="3"/>
+      <primary-key name="PRIMARY" columns="config_id"/>
+    </table>
+    <table name="app_districts" schema="" catalog="promosys" type="TABLE">
+      <column name="district_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="district_province" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="district_name" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="app_lists" schema="" catalog="promosys" type="TABLE">
+      <column name="list_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="list_type" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="list_value" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="list_text" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="list_id"/>
+    </table>
+    <table name="app_logins" schema="" catalog="promosys" type="TABLE">
+      <column name="login_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="login_user" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="login_date" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="login_id"/>
+    </table>
+    <table name="app_logs" schema="" catalog="promosys" type="TABLE">
+      <column name="log_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="log_description" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="log_exception" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="log_title" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="log_date" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="log_id"/>
+    </table>
+    <table name="app_notifications" schema="" catalog="promosys" type="TABLE">
+      <column name="notification_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="notification_user" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="notification_type" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="notification_post" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="notification_title" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="notification_description" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="notification_posted" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="notification_id"/>
+    </table>
+    <table name="app_passengers" schema="" catalog="promosys" type="TABLE">
+      <column name="pass_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pass_trip" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="pass_phone" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="pass_status" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="pass_posted" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="pass_posteduser" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="pass_modified" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="pass_modifieduser" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="pass_id"/>
+    </table>
+    <table name="app_phones" schema="" catalog="promosys" type="TABLE">
+      <column name="phone_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="phone_number" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_balance" sqlType="DECIMAL" precision="10" scale="3" nullable="true" jdbcType="3"/>
+      <column name="phone_country" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_avater" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_fname" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_lname" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_email" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_address" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_town" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_timezone" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_hash" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_status" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="phone_gender" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="phone_age" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="phone_license_front_filename" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="phone_license_front_filesizekb" sqlType="DECIMAL" precision="10" scale="3" nullable="true" jdbcType="3"/>
+      <column name="phone_updated" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="phone_registered" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="phone_id"/>
+    </table>
+    <table name="app_posts" schema="" catalog="promosys" type="TABLE">
+      <column name="post_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="post_trip_date" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="post_to_lat" sqlType="DOUBLE" precision="10" scale="3" nullable="true" jdbcType="8"/>
+      <column name="post_to_lon" sqlType="DOUBLE" precision="10" scale="3" nullable="true" jdbcType="8"/>
+      <column name="post_from_lat" sqlType="DOUBLE" precision="10" scale="3" nullable="true" jdbcType="8"/>
+      <column name="post_from_lon" sqlType="DOUBLE" precision="10" scale="3" nullable="true" jdbcType="8"/>
+      <column name="post_from_district" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="post_from_area" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="post_to_district" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="post_to_area" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="post_local" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="post_seats" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="post_gender" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="post_age" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="post_price_zm" sqlType="DOUBLE" precision="10" scale="3" nullable="true" jdbcType="8"/>
+      <column name="post_posted" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="post_car" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="post_posteduser" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="post_modified" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="post_modifieduser" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="post_id"/>
+    </table>
+    <table name="app_project_statuses" schema="" catalog="promosys" type="TABLE">
+      <column name="pstatus_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="pstatus_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="pstatus_description" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="pstatus_modified" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="pstatus_modifieduser" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="pstatus_id"/>
+    </table>
+    <table name="app_provinces" schema="" catalog="promosys" type="TABLE">
+      <column name="province_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="province_name" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="app_requests" schema="" catalog="promosys" type="TABLE">
+      <column name="request_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="request_type" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="request_feature" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="request_user" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="request_token" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="request_version" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="request_posted" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="request_id"/>
+    </table>
+    <table name="app_roles" schema="" catalog="promosys" type="TABLE">
+      <column name="role_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="role_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_description" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="role_modified" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="role_posted" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="role_modifieduser" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="role_id"/>
+    </table>
+    <table name="app_statuses" schema="" catalog="promosys" type="TABLE">
+      <column name="status_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="status_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="status_description" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="status_id"/>
+    </table>
+    <table name="app_transactions" schema="" catalog="promosys" type="TABLE">
+      <column name="tran_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tran_source_phone" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="tran_target_phone" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="tran_amount" sqlType="DECIMAL" precision="10" scale="3" nullable="true" jdbcType="3"/>
+      <column name="tran_current_balance" sqlType="DECIMAL" precision="10" scale="3" nullable="true" jdbcType="3"/>
+      <column name="tran_type" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="tran_post" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="tran_status" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="tran_posted" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="tran_posteduser" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="tran_id"/>
+    </table>
+    <table name="app_user_roles" schema="" catalog="promosys" type="TABLE">
+      <column name="userrole_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="userrole_role" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="userrole_user" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="userrole_modified" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="userrole_posted" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="userrole_modifieduser" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="userrole_id"/>
+    </table>
+    <table name="app_users" schema="" catalog="promosys" type="TABLE">
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_username" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="user_fname" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="user_lname" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="user_position" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="user_rate" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="user_email" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="user_password" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="user_role" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="user_status" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="user_modified" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="user_posted" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="user_modifieduser" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="user_id"/>
+    </table>
+    <table name="app_views" schema="" catalog="promosys" type="TABLE">
+      <column name="view_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="view_post" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="view_phone" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="view_posted" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="view_id"/>
+    </table>
+    <table name="app_votes" schema="" catalog="promosys" type="TABLE">
+      <column name="vote_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="vote_phone" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="vote_post" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="vote_type" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="vote_comment" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="vote_posted" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="vote_id"/>
+    </table>
+    <table name="rep_months" schema="" catalog="promosys" type="TABLE">
+      <column name="month_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="month_name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="month_abbrev" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="month_id"/>
+    </table>
+    <table name="v_phones" schema="" catalog="promosys" type="VIEW">
+      <column name="phone_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="phone_number" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_balance" sqlType="DECIMAL" precision="10" scale="3" nullable="true" jdbcType="3"/>
+      <column name="phone_country" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_avater" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_fname" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_lname" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_email" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_address" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_town" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_timezone" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_hash" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone_status" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="phone_gender" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="phone_age" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="phone_license_front_filename" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="phone_license_front_filesizekb" sqlType="DECIMAL" precision="10" scale="3" nullable="true" jdbcType="3"/>
+      <column name="phone_updated" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="phone_registered" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="FeatureType" sqlType="VARCHAR" precision="4" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="PostType" sqlType="VARCHAR" precision="4" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="u_phone_balance" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="a_user_age" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="a_user_gender" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="last_token" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+    </table>
+    <table name="v_phones_last_request" schema="" catalog="promosys" type="VIEW">
+      <column name="request_user" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="last_request" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+    </table>
+  </data-source>
+</component>

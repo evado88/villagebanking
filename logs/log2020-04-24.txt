@@ -1,0 +1,29 @@
+REQUEST:
+
+array (
+  'key' => 'zyKROQ8sMMx676HLah3t9zaaPNtfXyrf',
+  'task' => 'ProcessLicenseImage',
+  'user' => '260977123456',
+  'version' => '1',
+  'token' => '46',
+) 
+
+
+POST:
+
+array (
+) 
+
+
+FILE:
+
+array (
+  'image' => 
+  array (
+    'name' => 'DSC_0011.JPG',
+    'type' => 'image/jpeg',
+    'tmp_name' => 'C:\\apache\\tmp\\php3CA7.tmp',
+    'error' => 0,
+    'size' => 13867255,
+  ),
+)
